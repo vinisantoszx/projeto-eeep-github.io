@@ -1,15 +1,13 @@
 /* site desenvolvido por VINICIUS SANTOS */
 /* entre em contato por @vinisantoszx*/
 
-/* CARROSSEL - DESKTOP */
+/* carrossel de imagens */
 .carossel {
-    width: 100%;
-    height: 400px;
-    max-width: 1920px;
-
     position: relative;
-
+    width: 100%;
+    max-width: 1920px;
     overflow: hidden;
+    height: 400px;
 }
 
 .carossel-inner {
@@ -20,23 +18,19 @@
 .carossel-inner img {
     width: 100%;
     height: 400px;
-
     object-fit: cover;
 }
 
 .carossel-control {
     position: absolute;
     top: 50%;
-
     transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     cursor: pointer;
     padding: 10px;
-
     z-index: 1;
-
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .carossel-control.prev {
@@ -48,28 +42,25 @@
 }
 
 .carossel-indicators {
-    display: flex;
     position: absolute;
     bottom: 10px;
     left: 50%;
-
     transform: translateX(-50%);
+    display: flex;
     gap: 10px;
 }
 
 .carossel-indicator {
     width: 10px;
     height: 10px;
-
+    background-color: #fff;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
-
-    background-color: #fff;
 }
 
 .carossel-indicator.active {
-    background-color: #3c3c3c;
+    background-color: #e98b38;
 }
 
 /* CARDS DE SERVIÇOS */
@@ -146,11 +137,11 @@
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
 
-    background-color: #a6a6a6;
+    background-color: #e98b38;
 }
 
 .btn:hover {
-    background-color: #868686;
+    background-color: #ce6c16;
 }
 
 /* MAIS INFO */

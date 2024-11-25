@@ -1,10 +1,8 @@
 /* site desenvolvido por VINICIUS SANTOS */
 /* entre em contato por @vinisantoszx*/
 
-/* FINALIZADO DIA 23/09/2024 */
-
 footer {
-    background-color: #3c3c3c;
+    background: linear-gradient(to bottom, #e98b38, #cd7528, #ae590f, #944907);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -50,7 +48,7 @@ footer {
 }
 
 .footer-column a:hover {
-    color: #000000;
+    color: #652a06;
 
     text-decoration: underline;
     transition: 0.2s;
@@ -84,7 +82,7 @@ footer {
 }
 
 .footer-bottom a {
-    color: #000;
+    color: #592403;
 
     font-weight: bolder;
     text-decoration: none;

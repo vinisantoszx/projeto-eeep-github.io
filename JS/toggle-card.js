@@ -9,7 +9,4 @@ function toggleCard(headerElement) {
         cardBody.style.maxHeight = cardBody.scrollHeight + "px";
         cardBody.classList.add('expanded');
     }
-
-    const content = document.querySelector('.expandable-content');
-    content.classList.toggle('expanded');
 }
