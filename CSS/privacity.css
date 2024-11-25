@@ -1,0 +1,59 @@
+/* site desenvolvido por VINICIUS SANTOS */
+/* entre em contato por @vinisantoszx*/
+
+/* FINALIZADO DIA 07/10/2024 */
+
+/* INÍCIO - POLÍTICA DE PRIVACIDADE */
+
+.text-services h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+
+
+.text-services {
+    margin-top: 20px;
+}
+
+.text-services p{
+    font-size: 16px;
+    margin: 10px 80px;
+    text-align: justify;
+    
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+.text-services li {
+    display: flex;
+
+    margin-top: 20px;
+    margin-left: 80px;
+
+    font-size: 18px;
+
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 659px) {
+    .text-services li{
+        margin: 10px 40px;
+    }
+
+    .text-services p {
+        margin: 10px 40px;
+    }
+
+    .text-services h4 {
+        margin: 10px 0px;
+
+        font-weight: 500;
+    }
+}

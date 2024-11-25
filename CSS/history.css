@@ -1,0 +1,140 @@
+/* site desenvolvido por VINICIUS SANTOS */
+/* entre em contato por @vinisantoszx*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+    overflow-x: hidden;
+}
+
+.text-services {
+    margin-top: 20px;
+}
+
+.text-services h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 24px;
+
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.text-services p {
+    font-size: 16px;
+    margin: 10px 80px;
+    text-align: justify;
+
+    line-height: 1.25;
+    
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+.img-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    background-color: #eee;
+}
+
+.img-history img {
+    width: 23vw;
+    height: auto;
+    margin: 10px 5px;
+}
+
+ul.checklist {
+    margin: 10px 20px;
+
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.checklist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+
+    display: inline-block;
+    position: relative;
+
+    background-color: #303030;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}   
+
+.checkmark:hover {
+    background-color: #000;
+}
+
+.checkmark::after {
+    width: 8px;
+    height: 8px;
+
+    position: absolute;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+#bold {
+    font-size: 16px;
+
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+    
+
+@media (max-width: 999px) {
+    .img-history {
+        flex-direction: column; /* Alinha as imagens em coluna */
+        align-items: center; /* Centraliza as imagens */
+    }
+
+    .img-history img {
+        width: 80%; /* Tamanho das imagens na coluna */
+        margin: 10px 0; /* Espaço entre as imagens */
+    }
+}
+
+@media (max-width: 659px) {
+    .text-services {
+        margin: 20px -40px 0px -40px;
+    }
+
+    ul.checklist {
+        margin: 10px 60px;
+    
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .img-history img {
+        width: 70%; /* Tamanho das imagens na coluna */
+        margin: 10px 0; /* Espaço entre as imagens */
+    }
+}
