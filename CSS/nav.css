@@ -7,40 +7,73 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #ffffff;
 
-    border-bottom: #e98b38 2px solid;
-}
+    background: #f5f8ff;
+    border-bottom: #002b64 2px solid;
 
-main {
-    background-size: cover;
-    height: 80vh;
+    overflow-x: hidden;
+
+    z-index: 1000;
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    align-items: center;
 }
 
 .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+    margin-right: 40px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
 }
 
 .link-nav {
-    color: #e98b38;
+    color: #002b64;
     text-decoration: none;
+
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-style: normal;
+
     transition: 0.3s;
 }
+
+#login {
+    width: 100px;
+    height: 40px;
+
+    background-color: #008cef;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+}
+
+#login a {
+    text-decoration: none;
+
+    color: #fff;
+    font-weight: bold;
+}
+
 
 .link-nav:hover {
     opacity: 0.7;
 }
 
 .image-logo {
-    height: 14vh;
+    height: 8vh;
+
     transition: 0.3s;
 }
 
@@ -57,10 +90,25 @@ main {
 .mobile-menu div {
     width: 32px;
     height: 2px;
-    background: #e98b38;
+
     margin: 8px;
     transition: 0.3s;
+
+    background-color: #002b64;
 }
+
+
+/* BREAKROW - UNIDADES ESCOLARES */
+#break-school {
+    display: none;
+}
+
+@media (max-width: 1200px) and (min-width: 1000px){
+    #break-school {
+        display: block;
+    }
+}
+
 
 @media (max-width: 999px) {
     .nav-list {
@@ -76,7 +124,7 @@ main {
         align-items: center;
         justify-content: space-around;
         
-        border-bottom: #e98b38 2px solid;
+        border-bottom: #002b64 2px solid;
         
         transform: translateY(-140%);
         transition: transform 0.4s ease-in;
@@ -86,12 +134,12 @@ main {
         z-index: 99;
     }
 
-.nav-list li {
-        margin-left: 0;
+    .nav-list li {
+        margin-right: 0px;
         opacity: 0;
     }
 
-.mobile-menu {
+    .mobile-menu {
         display: block;
     }
 }

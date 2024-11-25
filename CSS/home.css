@@ -1,13 +1,15 @@
 /* site desenvolvido por VINICIUS SANTOS */
 /* entre em contato por @vinisantoszx*/
 
-/* carrossel de imagens */
+/* CARROSSEL - DESKTOP */
 .carossel {
-    position: relative;
     width: 100%;
-    max-width: 1920px;
-    overflow: hidden;
     height: 400px;
+    max-width: 1920px;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
 .carossel-inner {
@@ -18,19 +20,23 @@
 .carossel-inner img {
     width: 100%;
     height: 400px;
+
     object-fit: cover;
 }
 
 .carossel-control {
     position: absolute;
     top: 50%;
+
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     cursor: pointer;
     padding: 10px;
+
     z-index: 1;
+
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .carossel-control.prev {
@@ -42,25 +48,28 @@
 }
 
 .carossel-indicators {
+    display: flex;
     position: absolute;
     bottom: 10px;
     left: 50%;
+
     transform: translateX(-50%);
-    display: flex;
     gap: 10px;
 }
 
 .carossel-indicator {
     width: 10px;
     height: 10px;
-    background-color: #fff;
+
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
+
+    background-color: #fff;
 }
 
 .carossel-indicator.active {
-    background-color: #e98b38;
+    background-color: #3c3c3c;
 }
 
 /* CARDS DE SERVIÇOS */
@@ -78,7 +87,8 @@
 .text-services h1 {
     font-size: 24px;
 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-style: normal; 
     font-weight: bolder;
 }
 
@@ -94,7 +104,7 @@
 }
 
 .card {
-    width: 250px;
+    width: 300px;
     height: 120px;
     padding: 20px;
     text-align: center;
@@ -110,8 +120,10 @@
     color: #333;
     
     text-transform: uppercase;
+
     font-size: 16px;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-style: normal;
     font-weight: bolder;
 }
 
@@ -120,7 +132,9 @@
     color: #666;
     margin-bottom: 20px;
 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+    line-height: 16px;
 }
 
 .btn {
@@ -134,14 +148,14 @@
     transition: background-color 0.3s ease;
 
     text-transform: uppercase;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
 
-    background-color: #e98b38;
+    background-color: #a6a6a6;
 }
 
 .btn:hover {
-    background-color: #ce6c16;
+    background-color: #868686;
 }
 
 /* MAIS INFO */
@@ -159,7 +173,7 @@
 .text-info h1 {
     font-size: 24px;
 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
 }
 
@@ -204,7 +218,7 @@
 
     margin-left: 40px;
 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-family: "Merriweather Sans", system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
 }
 
@@ -215,9 +229,9 @@
     font-size: 16px;
     text-align: justify;
 
-    line-height: 1.25;
+    font-family: "Montserrat", system-ui, -apple-system, Helvetica, Arial, sans-serif;
 
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    line-height: 22px;
 }
 
 /* RESPONSIVIDADE - MOBILE*/
@@ -238,7 +252,7 @@
     }
 }
 
-@media (max-width: 659px) {
+@media (max-width: 750px) {
     .carossel {
         height: auto;
     }

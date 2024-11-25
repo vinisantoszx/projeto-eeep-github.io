@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boi Catingueiro - Início</title>
+    <title>Medclinic - Início</title>
 
     <!-- CSS E RESET -->
     <link rel="stylesheet" href="CSS/home.css">
@@ -12,15 +12,23 @@
     <link rel="stylesheet" href="CSS/footer.css">
 
     <!-- FONTES E LINKS EXTERNOS -->
-    <link rel="shortcut icon" href="IMG/main-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="IMG/logotipo-vs.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
 </head>
+
+<!-- FINALIZADO DIA 22/10/2024 -->
+
 <body>
-    
+
     <!-- MENU DE NAVEGAÇÃO - DESKTOP/MOBILE -->
     <nav class="main-menu">
-        <a href="index.html"><img src="IMG/main-logo.png" alt="logo-acmjaii" class="image-logo"></a>
+        <a href="index.html"><img src="IMG/logo-white.png" alt="logo-sme" class="image-logo"></a>
         <div class="mobile-menu">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -28,21 +36,22 @@
         </div>
         <ul class="nav-list">
             <li><a href="index.html" class="link-nav">Início</a></li>
-            <li><a href="history.html" class="link-nav">História</a></li>
-            <li><a href="projects.html" class="link-nav">Projetos</a></li>
-            <li><a href="achievements.html" class="link-nav"><p>Conquistas</p></a></li>
+            <li><a href="departaments.html" class="link-nav">Departamentos</a></li>
+            <li><a href="units.html" class="link-nav">Unidades</a></li>
+            <li>
+                <div id="login"><a href="login.html" class="link-nav">Login</a></div>
+            </li>
         </ul>
     </nav>
 
     <!-- PÁGINA - HOME -->
     <main>
-
         <!-- CARROSEL DE IMAGENS -->
         <div class="carossel">
             <div class="carossel-inner">
-                <img src="https://via.placeholder.com/1200x100?text=Imagem+1" alt="Imagem 1">
-                <img src="https://via.placeholder.com/1200x100?text=Imagem+2" alt="Imagem 2">
-                <img src="https://via.placeholder.com/1200x100?text=Imagem+3" alt="Imagem 3">
+                <img src="https://via.placeholder.com/1920x400" alt="Imagem 1">
+                <img src="https://via.placeholder.com/1920x400" alt="Imagem 2">
+                <img src="https://via.placeholder.com/1920x400" alt="Imagem 3">
             </div>
             <button class="carossel-control prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="carossel-control next" onclick="moveSlide(1)">&#10095;</button>
@@ -51,22 +60,22 @@
 
         <!-- CARDS SERVIÇOS -->
         <div class="text-services">
-            <h1>Serviços</h1>
+            <h1>Serviços online</h1>
         </div>
 
         <div class="cards-services">
             <!-- CARD DE CONTRACHEQUE -->
             <div class="card">
-                <h3>Nossa história</h3>
-                <p>Acesse o seu contracheque online de forma rápida e segura.</p>
-                <a href="history.html" class="btn">Conheça nossa origem</a>
+                <h3>Serviço 1</h3>
+                <p>Acesse o seu serviço online de forma rápida e segura.</p>
+                <a href="#" class="btn">Acessar serviço</a>
             </div>
     
             <!-- CARD DE CONTATO -->
             <div class="card">
-                <h3>Projetos</h3>
+                <h3>Central de atendimento</h3>
                 <p>Precisa de ajuda? Fale conosco através de nossos canais de atendimento.</p>
-                <a href="projects.html" class="btn">Saiba Mais</a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTFFHrwDbQWRPmDVtWFSJdfXrBZnrrdVBFHBwlDzVGhfphGrwfgRRSpwGdjHJxtBbktRxJ" class="btn">Entrar em Contato</a>
             </div>
         </div>
         
@@ -77,37 +86,39 @@
         <div class="container">
             <div class="card-info">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d412.5552823725288!2d-39.51018691622567!3d-4.70183674058443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1726161912161!5m2!1spt-BR!2sbr" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30219926.81420294!2d-73.16447107577314!3d-13.413332832511053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9c59c7ebcc28cf%3A0x295a1506f2293e63!2sBrasil!5e1!3m2!1spt-BR!2sbr!4v1729776409860!5m2!1spt-BR!2sbr" 
                         allowfullscreen="" 
                         loading="lazy"></iframe>
             </div>
             <div class="content">
-                <h2>DE ALEGRE PARA O MUNDO!</h2>
-                <p>A nossa empresa tem a responsabilidade de elaborar o Plano Municipal de Educação, que deve incluir as bases e diretrizes da educação municipal, conforme a legislação vigente. Além disso, comprometemo-nos a desenvolver normas pedagógicas específicas para o ensino fundamental, especial e infantil, alinhadas com as diretrizes e programas gerais estabelecidos para o sistema municipal de educação.</p>
+                <h2>Slogan da Empresa</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio quaerat sed est quibusdam molestias laboriosam tenetur maxime amet laudantium voluptatum quod nostrum, nobis adipisci, ex suscipit quasi. Tenetur, distinctio quia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero tenetur natus repudiandae inventore, accusantium aspernatur? Deleniti laudantium unde harum asperiores? Nemo suscipit minima dolorem unde architecto in maxime ratione. At?</p>
             </div>
         </div>
 
+        <!-- FOOTER -->
         <footer>
             <div class="footer-container">
                 <!-- Coluna de Contato -->
                 <div class="footer-column">
                     <h2>Contato</h2>
-                    <p>Endereço: Alegre II, S/N, Itatira-CE</p>
-                    <p>Telefone: (88) 3436-</p>
-                    <p>CNPJ: 06.086.082/0001-15</p>
-                    <p>Email: associacao</p>
+                    <p>Endereço: Rua X, S/N</p>
+                    <p>Telefone: (00) 00000-0000</p>
+                    <p>CNPJ: 00.000.000/0000-00</p>
+                    <p>Email: example@example.com</p>
+                    <p>Horário de Atendimento: Segunda a Sexta, 8h - 16h</p>
                 </div>
     
                 <!-- Coluna de Links e Redes Sociais -->
                 <div class="footer-column">
                     <h2>Links Rápidos</h2>
-                    <p><a href="#blog">Blog</a></p>
-                    <p><a href="#privacidade">Política de Privacidade</a></p>
+                    <p><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTFFHrwDbQWRPmDVtWFSJdfXrBZnrrdVBFHBwlDzVGhfphGrwfgRRSpwGdjHJxtBbktRxJ">FAQ</a></p>
+                    <p><a href="privacity.html">Política de Privacidade</a></p>
     
                     <div class="social-icons">
-                        <a href="https://facebook.com" target="_blank"><img src="IMG/facebook.png" alt="Facebook"></a>
-                        <a href="https://blogger.com" target="_blank"><img src="IMG/blogger.png" alt="Blogger"></a>
-                        <a href="https://instagram.com" target="_blank"><img src="IMG/instagram.png" alt="Instagram"></a>
+                        <a href="#" target="_blank"><img src="IMG/facebook.svg" alt="Facebook"></a>
+                        <a href="#" target="_blank"><img src="IMG/whatsapp.svg" alt="Whatsapp"></a>
+                        <a href="#" target="_blank"><img src="IMG/instagram.svg" alt="Instagram"></a>
                     </div>
                 </div>
             </div>
