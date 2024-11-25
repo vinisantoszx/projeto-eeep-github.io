@@ -4,7 +4,7 @@
 /* FINALIZADO DIA 23/09/2024 */
 
 footer {
-    background-color: #3c3c3c;
+    background-color: #002b64;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -50,7 +50,7 @@ footer {
 }
 
 .footer-column a:hover {
-    color: #000000;
+    color: #6294ff;
 
     text-decoration: underline;
     transition: 0.2s;
@@ -84,7 +84,7 @@ footer {
 }
 
 .footer-bottom a {
-    color: #000;
+    color: #6294ff;
 
     font-weight: bolder;
     text-decoration: none;
