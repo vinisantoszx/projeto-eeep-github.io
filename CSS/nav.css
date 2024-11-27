@@ -175,3 +175,19 @@
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
+.user-info {
+    display: flex;
+    align-items: center;
+    color: #002b64;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.user-info .material-symbols-outlined {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+#username {
+    font-weight: bold;
+}
+
