@@ -69,3 +69,40 @@ form.addEventListener("submit", function(event) {
         eyeIconClosed.style.display = 'none';
       }
     }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const registerForm = document.getElementById("rg-form");
+    const loginForm = document.getElementById("login-form");
+
+    // Salvando o registro
+    registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nome = document.getElementById("nm-usuario").value;
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        if (nome && email && senha) {
+            localStorage.setItem("user", JSON.stringify({ nome, email, senha }));
+            alert("Usuário cadastrado com sucesso!");
+        } else {
+            alert("Preencha todos os campos.");
+        }
+    });
+
+    // Validação de login
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nomeLogin = document.getElementById("nm-usuario1").value;
+        const senhaLogin = document.getElementById("senha1").value;
+
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (user && user.nome === nomeLogin && user.senha === senhaLogin) {
+            alert("Login bem-sucedido!");
+            localStorage.setItem("isLoggedIn", "true");
+            window.location.href = "index.html"; // Redireciona para a página inicial
+        } else {
+            alert("Nome ou senha incorretos.");
+        }
+    });
+});
