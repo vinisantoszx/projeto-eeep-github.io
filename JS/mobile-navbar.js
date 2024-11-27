@@ -44,21 +44,24 @@ class MobileNavbar {
   );
   mobileNavbar.init();
 
-  
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const user = JSON.parse(localStorage.getItem("user"));
+
     const loginElement = document.getElementById("login");
     const userProfile = document.getElementById("user-profile");
+    const logoutButton = document.getElementById("logout-button");
     const usernameElement = document.getElementById("username");
 
     if (isLoggedIn && user) {
-        loginElement.style.display = "none";
-        userProfile.style.display = "flex";
-        usernameElement.textContent = user.nome;
+        loginElement.style.display = "none"; // Oculta o botão de login
+        userProfile.style.display = "flex"; // Exibe o perfil do usuário
+        logoutButton.style.display = "block"; // Exibe o botão de logout
+        usernameElement.textContent = user.nome; // Mostra o nome do usuário
     }
+
+    logoutButton.addEventListener("click", () => {
+        localStorage.setItem("isLoggedIn", "false"); // Remove o estado logado
+        window.location.href = "login.html"; // Redireciona para a página de login
+    });
 });
-function logout() {
-    localStorage.setItem("isLoggedIn", "false");
-    window.location.href = "login.html"; // Redireciona para a página de login
-}
