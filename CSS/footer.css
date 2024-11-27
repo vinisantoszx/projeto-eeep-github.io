@@ -4,7 +4,9 @@
 /* FINALIZADO DIA 23/09/2024 */
 
 footer {
-    background-color: #002b64;
+    background: #00132c;
+    background: linear-gradient(0deg, #00132c 0%, #002b64 70%);
+
     color: #fff;
     padding: 20px;
     text-align: center;

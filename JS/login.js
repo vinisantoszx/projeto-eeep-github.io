@@ -98,13 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const senhaLogin = document.getElementById("senha1").value.trim();
         const user = JSON.parse(localStorage.getItem("user"));
 
-        // Validando credenciais
         if (user && user.nome === nomeLogin && user.senha === senhaLogin) {
             alert("Login bem-sucedido!");
             localStorage.setItem("isLoggedIn", "true");
             window.location.href = "index.html"; // Redireciona para a página inicial
         } else {
-            // Impede o redirecionamento e exibe alerta
             alert("Nome ou senha incorretos.");
         }
     });
