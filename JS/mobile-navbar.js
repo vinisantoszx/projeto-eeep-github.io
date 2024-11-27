@@ -44,21 +44,16 @@ class MobileNavbar {
   );
   mobileNavbar.init();
   
-    document.addEventListener("DOMContentLoaded", function () {
-        // Simulando login - normalmente essa informação viria de um servidor
-        const isLoggedIn = true; // Trocar para false para simular o usuário não logado
-        const userName = "Vinicius"; // Exemplo de nome do usuário
+    document.addEventListener("DOMContentLoaded", () => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const user = JSON.parse(localStorage.getItem("user"));
+    const loginElement = document.getElementById("login");
+    const userProfile = document.getElementById("user-profile");
+    const usernameElement = document.getElementById("username");
 
-        const loginElement = document.getElementById("login");
-        const userProfile = document.getElementById("user-profile");
-        const usernameElement = document.getElementById("username");
-
-        if (isLoggedIn) {
-            // Esconder o link de login
-            loginElement.style.display = "none";
-
-            // Exibir o perfil do usuário
-            userProfile.style.display = "flex";
-            usernameElement.textContent = userName;
-        }
-    });
+    if (isLoggedIn && user) {
+        loginElement.style.display = "none";
+        userProfile.style.display = "flex";
+        usernameElement.textContent = user.nome;
+    }
+});
