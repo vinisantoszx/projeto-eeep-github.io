@@ -65,3 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "login.html"; // Redireciona para a página de login
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+        alert("Você precisa fazer login para acessar esta página.");
+        window.location.href = "login.html"; // Redireciona para a página de login
+    }
+});
