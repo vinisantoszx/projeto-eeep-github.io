@@ -43,6 +43,7 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
+
   
     document.addEventListener("DOMContentLoaded", () => {
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
@@ -57,3 +58,7 @@ class MobileNavbar {
         usernameElement.textContent = user.nome;
     }
 });
+function logout() {
+    localStorage.setItem("isLoggedIn", "false");
+    window.location.href = "login.html"; // Redireciona para a página de login
+}
