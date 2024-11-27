@@ -77,9 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Salvando o registro
     registerForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        const nome = document.getElementById("nm-usuario").value;
-        const email = document.getElementById("email").value;
-        const senha = document.getElementById("senha").value;
+
+        const nome = document.getElementById("nm-usuario").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const senha = document.getElementById("senha").value.trim();
 
         if (nome && email && senha) {
             localStorage.setItem("user", JSON.stringify({ nome, email, senha }));
@@ -92,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Validação de login
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        const nomeLogin = document.getElementById("nm-usuario1").value;
-        const senhaLogin = document.getElementById("senha1").value;
 
+        const nomeLogin = document.getElementById("nm-usuario1").value.trim();
+        const senhaLogin = document.getElementById("senha1").value.trim();
         const user = JSON.parse(localStorage.getItem("user"));
 
         if (user && user.nome === nomeLogin && user.senha === senhaLogin) {
