@@ -203,3 +203,12 @@
 #logout-button button:hover {
     opacity: 0.8;
 }
+@media (max-width: 999px) {
+    #logout-button {
+        display: block;
+        margin-top: 10px;
+    }
+    .logout-btn {
+        width: 100%;
+    }
+}
