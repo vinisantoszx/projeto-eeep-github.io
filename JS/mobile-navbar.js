@@ -43,7 +43,7 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
-  <script>
+  
     document.addEventListener("DOMContentLoaded", function () {
         // Simulando login - normalmente essa informação viria de um servidor
         const isLoggedIn = true; // Trocar para false para simular o usuário não logado
@@ -62,4 +62,3 @@ class MobileNavbar {
             usernameElement.textContent = userName;
         }
     });
-</script>
