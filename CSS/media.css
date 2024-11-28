@@ -83,3 +83,31 @@
     }
 
 }
+.servicos__titulo,
+.contato__titulo {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1em 0;
+}
+
+i {
+  margin: 10px;
+}
+
+.social .icon {
+  font-size: 4lvh;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgb(20, 138, 248);
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
