@@ -72,7 +72,7 @@
 }
 
 .image-logo {
-    height: 10vh;
+    height: 15vh;
 
     transition: 0.3s;
 }
@@ -111,6 +111,12 @@
 
 
 @media (max-width: 999px) {
+    .image-logo {
+        height: 10vh;
+    
+        transition: 0.3s;
+    }
+
     .nav-list {
         width: 100vw;
         height: 60vh;
