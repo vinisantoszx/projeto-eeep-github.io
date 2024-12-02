@@ -50,6 +50,20 @@
     button.ghost {
         width: 150%;
     }
+    h1.title {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+        text-shadow: 0 0 10px rgb(4, 36, 111);
+    }
+    .content label {
+        font-size: 12px;
+        user-select: none;
+        padding-left: -10px;
+    }
+    .content .checkbox {
+        display: flex;
+    }
 
 
 }
