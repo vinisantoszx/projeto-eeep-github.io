@@ -1,209 +1,330 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medclinic - Início</title>
 
     <!-- CSS E RESET -->
-    <link rel="stylesheet" href="CSS/home.css">
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/nav.css">
-    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/home.css" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/nav.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
 
     <!-- FONTES E LINKS EXTERNOS -->
-    <link rel="shortcut icon" href="IMG/Logo - MedClinic.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="shortcut icon"
+      href="IMG/Logo - MedClinic.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<!-- FINALIZADO DIA 22/10/2024 -->
+  <!-- FINALIZADO DIA 22/10/2024 -->
 
-<body>
-
+  <body>
     <!-- MENU DE NAVEGAÇÃO - DESKTOP/MOBILE -->
     <nav class="main-menu">
-        <a href="index.html"><img src="IMG/Logo1.png" alt="logo-sme" class="image-logo"></a>
-        <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-            <li><a href="index.html" class="link-nav">Início</a></li>
-            <li><a href="departaments.html" class="link-nav">Departamentos</a></li>
-            <li><a href="units.html" class="link-nav">Unidades</a></li>
-            <li>
-                <div id="login"><a href="login.html" class="link-nav">Login</a></div>
-            </li>
-            <li id="user-profile" style="display: none;">
-    <div class="user-info">
-        <span class="material-symbols-outlined">account_circle</span>
-        <span id="username"></span>
-    </div>
-            </li>
-            <li id="logout-button" style="display: none;">
-                <button onclick="logout()">Sair</button>
-            </li>    
-        </ul>
+      <a href="index.html"
+        ><img src="IMG/Logo1.png" alt="logo-sme" class="image-logo"
+      /></a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index.html" class="link-nav">Início</a></li>
+        <li><a href="departaments.html" class="link-nav">Departamentos</a></li>
+        <li><a href="units.html" class="link-nav">Unidades</a></li>
+        <li>
+          <a href="/projeto-eeep-github.io/agendamento.html" class="link-nav"
+            >Agendamento</a
+          >
+        </li>
+        <li>
+          <div id="login"><a href="login.html" class="link-nav">Login</a></div>
+        </li>
+        <li id="user-profile" style="display: none">
+          <div class="user-info">
+            <span class="material-symbols-outlined">account_circle</span>
+            <span id="username"></span>
+          </div>
+        </li>
+        <li id="logout-button" style="display: none">
+          <button onclick="logout()">Sair</button>
+        </li>
+      </ul>
     </nav>
 
     <!-- PÁGINA - HOME -->
     <main>
-        <!-- CARROSEL DE IMAGENS -->
-        <div class="carossel">
-            <div class="carossel-inner">
-                <img src="IMG/home1.png" alt="Imagem 1">
-                <img src="IMG/home2.png" alt="Imagem 2">
-                <img src="IMG/home3.png" alt="Imagem 3">
-            </div>
-            <button class="carossel-control prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carossel-control next" onclick="moveSlide(1)">&#10095;</button>
-            <div class="carossel-indicators"></div> <!-- MARCADORES -->
+      <!-- CARROSEL DE IMAGENS -->
+      <div class="carossel">
+        <div class="carossel-inner">
+          <img src="IMG/home1.png" alt="Imagem 1" />
+          <img src="IMG/home2.png" alt="Imagem 2" />
+          <img src="IMG/home3.png" alt="Imagem 3" />
+        </div>
+        <button class="carossel-control prev" onclick="moveSlide(-1)">
+          &#10094;
+        </button>
+        <button class="carossel-control next" onclick="moveSlide(1)">
+          &#10095;
+        </button>
+        <div class="carossel-indicators"></div>
+        <!-- MARCADORES -->
+      </div>
+
+      <!-- CARDS SERVIÇOS -->
+      <div class="text-services">
+        <h1>Serviços online</h1>
+      </div>
+
+      <div class="cards-services">
+        <!-- CARD DE CONTRACHEQUE -->
+        <div class="card">
+          <h3>Serviço 1</h3>
+          <p>Acesse o seu serviço online de forma rápida e segura.</p>
+          <a href="#" class="btn">Acessar serviço</a>
         </div>
 
-        <!-- CARDS SERVIÇOS -->
-        <div class="text-services">
-            <h1>Serviços online</h1>
+        <!-- CARD DE CONTATO -->
+        <div class="card">
+          <h3>Central de atendimento</h3>
+          <p>
+            Precisa de ajuda? Fale conosco através de nossos canais de
+            atendimento.
+          </p>
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTFFHrwDbQWRPmDVtWFSJdfXrBZnrrdVBFHBwlDzVGhfphGrwfgRRSpwGdjHJxtBbktRxJ"
+            class="btn"
+            >Entrar em Contato</a
+          >
+        </div>
+      </div>
+
+      <!-- MAIS INFOS -->
+      <div class="text-info">
+        <h1>Mais informações</h1>
+      </div>
+      <div class="container">
+        <div class="card-info">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1889.99228506345!2d-39.67377663248537!3d-4.638470169064086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7be3f6cce8ea9b7%3A0x497241bfb2852e97!2sEscola%20Estadual%20de%20Educa%C3%A7%C3%A3o%20Profissional%20Jo%C3%A3o%20Jackson%20Lobo%20Guerra!5e1!3m2!1spt-BR!2sbr!4v1732796214667!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="content">
+          <h2>Medclinic</h2>
+          <p>
+            O projeto consiste na ampliação do agendamento clínico, buscando
+            promover a melhoria da qualidade da setorização das áreas de saúde e
+            atendimento médico, facilitando a consultoria da população e
+            otimizando o tempo hábil de pacientes e clínicas médicas. Com esse
+            sistema, poderemos avançar cada vez mais o nosso sistema de saúde
+            para um ideal de grande acessibilidade!
+          </p>
+        </div>
+      </div>
+
+      <!-- NOTÍCIAS -->
+      <div class="text-info">
+        <h1>Notícias</h1>
+      </div>
+      <div class="news">
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/oStz5A4yHleWh02chow-_ypAREQ=/0x0:1920x1080/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2014/09/12/pessoas_andando_na_rua_01.jpg"
+            alt="expectativa de vida"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>Expectativa de vida</h2>
+            <p>
+              Do brasileiro sobe para 76,4 anos e super índice pré-pandemia.
+            </p>
+          </div>
+          <a
+            href="https://g1.globo.com/saude/noticia/2024/11/29/expectativa-de-vida-do-brasileiro-sobe-para-764-anos-segundo-ibge.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
         </div>
 
-        <div class="cards-services">
-            <!-- CARD DE CONTRACHEQUE -->
-            <div class="card">
-                <h3>Serviço 1</h3>
-                <p>Acesse o seu serviço online de forma rápida e segura.</p>
-                <a href="#" class="btn">Acessar serviço</a>
-            </div>
-    
-            <!-- CARD DE CONTATO -->
-            <div class="card">
-                <h3>Central de atendimento</h3>
-                <p>Precisa de ajuda? Fale conosco através de nossos canais de atendimento.</p>
-                <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTFFHrwDbQWRPmDVtWFSJdfXrBZnrrdVBFHBwlDzVGhfphGrwfgRRSpwGdjHJxtBbktRxJ" class="btn">Entrar em Contato</a>
-            </div>
-        </div>
-        
-        <!-- MAIS INFOS -->
-        <div class="text-info">
-            <h1>Mais informações</h1>
-        </div>
-        <div class="container">
-            <div class="card-info">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1889.99228506345!2d-39.67377663248537!3d-4.638470169064086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7be3f6cce8ea9b7%3A0x497241bfb2852e97!2sEscola%20Estadual%20de%20Educa%C3%A7%C3%A3o%20Profissional%20Jo%C3%A3o%20Jackson%20Lobo%20Guerra!5e1!3m2!1spt-BR!2sbr!4v1732796214667!5m2!1spt-BR!2sbr" 
-                        allowfullscreen="" 
-                        loading="lazy"></iframe>
-            </div>
-            <div class="content">
-                <h2>Medclinic</h2>
-                <p>O projeto consiste na ampliação do agendamento clínico, buscando promover a melhoria da qualidade da setorização das áreas de saúde e atendimento médico, facilitando a consultoria da população e otimizando o tempo hábil de pacientes e clínicas médicas. Com esse sistema, poderemos avançar cada vez mais o nosso sistema de saúde para um ideal de grande acessibilidade!</p>
-            </div>
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/nnaPmM5Tk6kYEs4UXY4AYMPH0Hw=/0x0:5616x3744/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/u/0/fwTST3TuWKQ199cWifnQ/adobestock-387591282-1-.jpeg"
+            alt="Prevenção ao Diabetes"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>Músculos são a farmácia do corpo?</h2>
+            <p>
+              Entenda como a musculação regula e traz benefício para todo o
+              organismo.
+            </p>
+          </div>
+          <a
+            href="https://g1.globo.com/saude/noticia/2024/12/01/musculos-farmacia-do-corpo-entenda-musculacao.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
         </div>
 
-        <!-- NOTÍCIAS -->
-        <div class="text-info">
-            <h1>Notícias</h1>
-        </div>
-        <div class="news">
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/oStz5A4yHleWh02chow-_ypAREQ=/0x0:1920x1080/984x0/smart/filters:strip_icc()/s.glbimg.com/jo/g1/f/original/2014/09/12/pessoas_andando_na_rua_01.jpg" alt="expectativa de vida" class="news-image">
-                <div class="news-content">
-                    <h2> Expectativa de vida </h2>
-                    <p>Do brasileiro sobe para 76,4 anos e super índice pré-pandemia.</p>
-                </div>
-                <a href="https://g1.globo.com/saude/noticia/2024/11/29/expectativa-de-vida-do-brasileiro-sobe-para-764-anos-segundo-ibge.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
-    
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/nnaPmM5Tk6kYEs4UXY4AYMPH0Hw=/0x0:5616x3744/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/u/0/fwTST3TuWKQ199cWifnQ/adobestock-387591282-1-.jpeg" alt="Prevenção ao Diabetes" class="news-image">
-                <div class="news-content">
-                    <h2>Músculos são a farmácia do corpo?</h2>
-                    <p>Entenda como a musculação regula e traz benefício para todo o organismo.</p>
-                </div>
-                <a href="https://g1.globo.com/saude/noticia/2024/12/01/musculos-farmacia-do-corpo-entenda-musculacao.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
-    
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/my-vjjeuqPYEzOITcte0B9CzW68=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/e/o/wXPFsFRkCCItOo3F7XiQ/globo-canal-5-20241125-1748-frame-297234.jpeg" alt="Novos Horários" class="news-image">
-                <div class="news-content">
-                    <h2>Usuários de cigarros eletrônicos</h2>
-                    <p>Têm até seis vezes mais nicotina no sangue do que fumantes de cigarros convencionais.</p>
-                </div>
-                <a href="https://g1.globo.com/jornal-nacional/noticia/2024/11/25/usuarios-de-cigarros-eletronicos-tem-ate-seis-vezes-mais-nicotina-no-sangue-do-que-fumantes-de-cigarros-convencionais-diz-pesquisa.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
-            
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/lWA9x72vyBjLfHicnzp5NpAQkBk=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/W/b/cIMx5zT0yc67XqfBG4Ow/ozempic2.jpg" alt="Campanha de Vacinação" class="news-image">
-                <div class="news-content">
-                    <h2>Canetas emagrecedoras</h2>
-                    <p>Um em cada cinco pacientes pode não responder ao tratamento.</p>
-                </div>
-                <a href="https://g1.globo.com/saude/noticia/2024/11/25/canetas-emagrecedoras-um-em-cada-cinco-pacientes-pode-nao-responder-ao-tratamento-dizem-especialistas.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
-    
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/BFvjLQk6u2LnKhrBAEM8Bd5FVfo=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/Y/3/vH8pQESF6aEe6bbKOx9w/canva-ibn-19.png" alt="Prevenção ao Diabetes" class="news-image">
-                <div class="news-content">
-                    <h2>TDAH aumentando: 8 razões</h2>
-                    <p>Sven Bölte, explica que causas muitas vezes se sobrepõem e interagem entre si.</p>
-                </div>
-                <a href="https://g1.globo.com/saude/noticia/2024/11/24/oito-razoes-pelas-quais-os-diagnosticos-de-tdah-estao-aumentando.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
-    
-            <div class="news-card">
-                <img src="https://s2-g1.glbimg.com/vHnC-LjUGnmvyPH6Aoou_thbUaI=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/9/o/rNObwUSzW7DFZTA3N6tw/foto-1-colocando-a-mao-em-frente-a-boca-e-exalando-voce-pode-verificar-se-sofre-ou-nao-de-mau-halito.jpg" alt="Novos Horários" class="news-image">
-                <div class="news-content">
-                    <h2>Quais são as causas do mau hálito</h2>
-                    <p>As causas são desde a presença de bactérias na cavidade oral até certas doenças e dietas.</p>
-                </div>
-                <a href="https://g1.globo.com/saude/noticia/2024/11/22/causas-do-mau-halito-e-os-alimentos-que-podem-piora-lo.ghtml" class="read-more" target="_blank">Saiba Mais →</a>
-            </div>
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/my-vjjeuqPYEzOITcte0B9CzW68=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/e/o/wXPFsFRkCCItOo3F7XiQ/globo-canal-5-20241125-1748-frame-297234.jpeg"
+            alt="Novos Horários"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>Usuários de cigarros eletrônicos</h2>
+            <p>
+              Têm até seis vezes mais nicotina no sangue do que fumantes de
+              cigarros convencionais.
+            </p>
+          </div>
+          <a
+            href="https://g1.globo.com/jornal-nacional/noticia/2024/11/25/usuarios-de-cigarros-eletronicos-tem-ate-seis-vezes-mais-nicotina-no-sangue-do-que-fumantes-de-cigarros-convencionais-diz-pesquisa.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
         </div>
 
-        <!-- FOOTER -->
-        <footer>
-            <div class="footer-container">
-                <!-- Coluna de Contato -->
-                <div class="footer-column">
-                    <h2>Contato</h2>
-                    <p>Endereço: Rua X, S/N</p>
-                    <p>Telefone: (00) 00000-0000</p>
-                    <p>CNPJ: 00.000.000/0000-00</p>
-                    <p>Email: example@example.com</p>
-                    <p>Horário de Atendimento: Segunda a Sexta, 8h - 16h</p>
-                </div>
-    
-                <!-- Coluna de Links e Redes Sociais -->
-                <div class="footer-column">
-                    <h2>Links Rápidos</h2>
-                    <p><a href="equipe.html">Conheça a Equipe</a></p>
-                    <p><a href="privacity.html">Política de Privacidade</a></p>
-    
-                    <div class="social-icons">
-                        <a href="#" target="_blank"><img src="IMG/facebook.svg" alt="Facebook"></a>
-                        <a href="#" target="_blank"><img src="IMG/whatsapp.svg" alt="Whatsapp"></a>
-                        <a href="https://www.instagram.com/medclinic_ds3/" target="_blank"><img src="IMG/instagram.svg" alt="Instagram"></a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="footer-bottom">
-                <p>&copy; 2024 <a href="https://github.com/vinisantoszx/projeto-eeep-github.io">Turma DS3</a>. Todos os direitos reservados.</p>
-                <p>Desenvolvido por <a href="https://github.com/vinisantoszx/projeto-eeep-github.io" target="_blank">Turma DS3</a></p>
-            </div>
-        </footer>
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/lWA9x72vyBjLfHicnzp5NpAQkBk=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/W/b/cIMx5zT0yc67XqfBG4Ow/ozempic2.jpg"
+            alt="Campanha de Vacinação"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>Canetas emagrecedoras</h2>
+            <p>Um em cada cinco pacientes pode não responder ao tratamento.</p>
+          </div>
+          <a
+            href="https://g1.globo.com/saude/noticia/2024/11/25/canetas-emagrecedoras-um-em-cada-cinco-pacientes-pode-nao-responder-ao-tratamento-dizem-especialistas.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
+        </div>
 
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/BFvjLQk6u2LnKhrBAEM8Bd5FVfo=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/Y/3/vH8pQESF6aEe6bbKOx9w/canva-ibn-19.png"
+            alt="Prevenção ao Diabetes"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>TDAH aumentando: 8 razões</h2>
+            <p>
+              Sven Bölte, explica que causas muitas vezes se sobrepõem e
+              interagem entre si.
+            </p>
+          </div>
+          <a
+            href="https://g1.globo.com/saude/noticia/2024/11/24/oito-razoes-pelas-quais-os-diagnosticos-de-tdah-estao-aumentando.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
+        </div>
+
+        <div class="news-card">
+          <img
+            src="https://s2-g1.glbimg.com/vHnC-LjUGnmvyPH6Aoou_thbUaI=/540x304/top/smart/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/9/o/rNObwUSzW7DFZTA3N6tw/foto-1-colocando-a-mao-em-frente-a-boca-e-exalando-voce-pode-verificar-se-sofre-ou-nao-de-mau-halito.jpg"
+            alt="Novos Horários"
+            class="news-image"
+          />
+          <div class="news-content">
+            <h2>Quais são as causas do mau hálito</h2>
+            <p>
+              As causas são desde a presença de bactérias na cavidade oral até
+              certas doenças e dietas.
+            </p>
+          </div>
+          <a
+            href="https://g1.globo.com/saude/noticia/2024/11/22/causas-do-mau-halito-e-os-alimentos-que-podem-piora-lo.ghtml"
+            class="read-more"
+            target="_blank"
+            >Saiba Mais →</a
+          >
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-container">
+          <!-- Coluna de Contato -->
+          <div class="footer-column">
+            <h2>Contato</h2>
+            <p>Endereço: Rua X, S/N</p>
+            <p>Telefone: (00) 00000-0000</p>
+            <p>CNPJ: 00.000.000/0000-00</p>
+            <p>Email: example@example.com</p>
+            <p>Horário de Atendimento: Segunda a Sexta, 8h - 16h</p>
+          </div>
+
+          <!-- Coluna de Links e Redes Sociais -->
+          <div class="footer-column">
+            <h2>Links Rápidos</h2>
+            <p><a href="equipe.html">Conheça a Equipe</a></p>
+            <p><a href="privacity.html">Política de Privacidade</a></p>
+
+            <div class="social-icons">
+              <a href="#" target="_blank"
+                ><img src="IMG/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#" target="_blank"
+                ><img src="IMG/whatsapp.svg" alt="Whatsapp"
+              /></a>
+              <a href="https://www.instagram.com/medclinic_ds3/" target="_blank"
+                ><img src="IMG/instagram.svg" alt="Instagram"
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024
+            <a href="https://github.com/vinisantoszx/projeto-eeep-github.io"
+              >Turma DS3</a
+            >. Todos os direitos reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a
+              href="https://github.com/vinisantoszx/projeto-eeep-github.io"
+              target="_blank"
+              >Turma DS3</a
+            >
+          </p>
+        </div>
+      </footer>
     </main>
+  </body>
 
-</body>
-
-<!-- SCRIPTS - HOME-->
-<script src="JS/mobile-navbar.js"></script>
-<script src="JS/image-carrosel.js"></script>
-
+  <!-- SCRIPTS - HOME-->
+  <script src="JS/mobile-navbar.js"></script>
+  <script src="JS/image-carrosel.js"></script>
 </html>
