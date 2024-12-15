@@ -1,12 +1,24 @@
-/* site desenvolvido por VINICIUS SANTOS */
-/* entre em contato por @vinisantoszx*/
+/* Site desenvolvido por VINICIUS SANTOS, FELIPE E MANOEL LOBO */
+/* Entre em contato com algum dos desenvolvedores: @vinisantoszx | @imanoellob_ | @lipe9   */
 
 /* FINALIZADO DIA 16/10/2024 */
 
 /* INÍCIO - MARCADOR PÁGINA */
 .text-services {
+    margin-left: 80px;
+    display: flex;
     margin-top: 20px;
-    margin-bottom: 10px;
+}
+.titulo{
+    margin-left: 0px;
+    margin-top: 0;
+    background-color: #002b64;
+    color: white;
+    display: flex;
+    height: 50px;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .text-services h2 {

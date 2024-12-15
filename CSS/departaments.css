@@ -1,16 +1,19 @@
-/* site desenvolvido por VINICIUS SANTOS .*/
-/* entre em contato por @vinisantoszx*/
+/* Site desenvolvido por VINICIUS SANTOS, FELIPE E MANOEL LOBO */
+/* Entre em contato com algum dos desenvolvedores: @vinisantoszx | @imanoellob_ | @lipe9   */
+
 
 .text-services {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    display: flex;
+    background-color: #002b64;
+    color: white;
+    height: 50px;
+    
+    justify-content: center;
+    align-items: center;
 }
 
 .text-services h2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-size: 20px;
 
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -26,8 +29,14 @@
     align-items: center;
 }
 
+main{
+    padding: 30px 3%;
+    background-color: rgb(221, 221, 221);
+}
 .full-box{
-    padding: 10px 80px;
+    padding: 20px 2%;
+    border-radius: 20px;
+    background-color: rgb(237, 237, 237);
 }
 
 .full-width-card {
@@ -46,7 +55,7 @@
 
 .card-header {
     color: white;
-    padding: 15px;
+    padding: 10px 0 0 0;
     cursor: pointer;
     border-bottom: 1px solid #ccc;
 
@@ -55,6 +64,7 @@
 
 .card-header h2 {
     font-size: 18px;
+    padding: 5px 10px 5px 10px;
 
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
@@ -65,6 +75,8 @@
     max-height: 10px;
     transition: max-height 0.3s ease;
 
+    background-color: white;
+    color: black;
     overflow: hidden;
 }
 
@@ -73,6 +85,9 @@
 
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     font-weight: bolder;
+}
+.cardh2 {
+    color: rgb(106, 106, 106);
 }
 
 .card-body p {

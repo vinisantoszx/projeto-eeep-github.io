@@ -1,6 +1,8 @@
 function toggleCard(headerElement) {
     const card = headerElement.parentElement;
     const cardBody = card.querySelector('.card-body');
+    const h2 = document.querySelector('.cardh2');
+
 
     if (cardBody.style.maxHeight) {
         cardBody.style.maxHeight = null;
