@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/agendamento.css" />
+
+    <!-- FONTES E LINKS EXTERNOS -->
+    <link rel="shortcut icon" href="IMG/Logo - MedClinic.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+
+    <!-- Firebase App (necessário para inicializar) -->
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+<!-- Firebase Firestore (ou outro módulo que você deseja usar) -->
+<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script>
+
+  </head>
+  <body>
+
+    <!-- MENU DE NAVEGAÇÃO - DESKTOP/MOBILE -->
+    <nav class="main-menu">
+      <a href="index.html"><img src="IMG/Logo1.png" alt="logo-sme" class="image-logo"></a>
+      <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+          <li><a href="index.html" class="link-nav">Início</a></li>
+          <li><a href="departaments.html" class="link-nav">Departamentos</a></li>
+          <li><a href="units.html" class="link-nav">Unidades</a></li>
+          <li><a href="agendamento.html" class="link-nav">Agendamentos</a></li>
+          <li>
+              <div id="login"><a href="login.html" class="link-nav">Login</a></div>
+          </li>
+          <li id="user-profile" style="display: none;">
+  <div class="user-info">
+      <span class="material-symbols-outlined">account_circle</span>
+      <span id="username"></span>
+  </div>
+          </li>
+          <li id="logout-button" style="display: none;">
+              <button onclick="logout()">Sair</button>
+          </li>    
+      </ul>
+  </nav>
+
+    <div id="page">
+      <header>
+        <h1>Faça o seu agendamento</h1>
+        <p>O primeiro passo é preencher o formulário abaixo</p>
+      </header>
+      <form action="" id="my-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações de Agendamento</legend>
+  
+            <div class="input-wrapper">
+              <label for="event-title">Nome completo <span>(mínimo 8 caracteres)</span></label>
+              <input type="text" id="event-title" minlength="8" required />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="event-cpf">CPF <span>(Apenas Números)</span></label>
+              <input type="tel" id="event-cpf" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="event-whatsapp">Whatsapp Para Contato</label>
+              <input type="tel" id="event-whatsapp" pattern="\d+" required />
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="event-info">Informações Extras</label>
+              <textarea id="event-info" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+        </fieldset>
+  
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Consulta</legend>
+  
+            <div class="input-wrapper">
+              <label for="event-category">Especialidades</label>
+              <select id="event-category">
+                <option value="clinico-geral">Clínico Geral</option>
+                <option value="pediatra">Pediatra</option>
+                <option value="fisioterapeuta">Fisioterapeuta</option>
+                <option value="psicologo">Psicólogo</option>
+                <option value="dentista">Dentista</option>
+              </select>
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="event-department">Departamento</label>
+              <select id="event-department">
+                <option value="unidade-postao">Unidade Postão</option>
+                <option value="unidade-sede">Unidade Sede</option>
+                <option value="unidade-interior">Unidade Interior</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+  
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Data e Horário</legend>
+  
+            <div class="col-3">
+              <div class="input-wrapper">
+                <label for="event-date">Data</label>
+                <input type="date" id="event-date" required/>
+              </div>
+  
+              <div class="input-wrapper">
+                <label for="event-begin">Início</label>
+                <input type="time" id="event-begin" required/>
+              </div>
+  
+              <div class="input-wrapper">
+                <label for="event-end">Fim</label>
+                <input type="time" id="event-end" required/>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>      
+
+      <footer>
+        <button class="button" form="my-form">Salvar Agendamento</button>
+      </footer>
+    </div>
+
+
+
+
+    <script type="module">
+      // Importa as funções necessárias do Firebase
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+    
+      // Configuração do Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyCXjpOTU-JWlIRyVQNWTa24bM2cXzTWd_A",
+        authDomain: "medclinic-ds-30918.firebaseapp.com",
+        projectId: "medclinic-ds-30918",
+        storageBucket: "medclinic-ds-30918.firebasestorage.app",
+        messagingSenderId: "806442484893",
+        appId: "1:806442484893:web:4aa8836444593c1f338074"
+      };
+    
+      // Inicializa o Firebase e o Firestore
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+    
+      // Seleciona o formulário
+      const form = document.getElementById("my-form");
+    
+      // Manipula o evento de envio do formulário
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Evita o recarregamento da página
+    
+         // Captura os dados do formulário
+      const nome = document.getElementById("event-title").value;
+      const cpf = document.getElementById("event-cpf").value; // Corrigido aqui
+      const whatsapp = document.getElementById("event-whatsapp").value;
+      const informacoes = document.getElementById("event-info").value;
+      const especialidade = document.getElementById("event-category").value;
+      const departamento = document.getElementById("event-department").value; // Corrigido aqui
+      const data = document.getElementById("event-date").value;
+      const horaInicio = document.getElementById("event-begin").value;
+      const horaFim = document.getElementById("event-end").value;
+
+      // Objeto com os dados do agendamento
+      const agendamento = {
+        nome,
+        cpf,
+        whatsapp,
+        informacoes,
+        especialidade,
+        departamento,
+        data,
+        horaInicio,
+        horaFim,
+      };
+
+    
+        try {
+          // Salva os dados no Firestore (coleção "agendamentos")
+          await addDoc(collection(db, "agendamentos"), agendamento);
+          alert("Agendamento salvo com sucesso!");
+        } catch (error) {
+          console.error("Erro ao salvar o agendamento: ", error);
+          alert("Erro ao salvar o agendamento. Tente novamente!");
+        }
+      });
+    </script>
+
+  <script src="JS/agendamento.js"></script>
+  <script src="JS/mobile-navbar.js"></script> 
+  </body>
+</html>
