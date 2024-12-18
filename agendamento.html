@@ -14,7 +14,7 @@
     />
 
     <link rel="stylesheet" href="CSS/nav.css">
-    <link rel="stylesheet" href="/CSS/agendamento.css" />
+    <link rel="stylesheet" href="CSS/agendamento.css" />
 
     <!-- FONTES E LINKS EXTERNOS -->
     <link rel="shortcut icon" href="IMG/Logo - MedClinic.png" type="image/x-icon">
@@ -23,12 +23,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-     
-
-    <!-- Firebase App (necessário para inicializar) -->
-<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
-<!-- Firebase Firestore (ou outro módulo que você deseja usar) -->
-<script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script>
 
   </head>
   <body>
@@ -147,71 +141,6 @@
         <button class="button" form="my-form">Salvar Agendamento</button>
       </footer>
     </div>
-
-
-
-
-    <script type="module">
-      // Importa as funções necessárias do Firebase
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-      import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-    
-      // Configuração do Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyCXjpOTU-JWlIRyVQNWTa24bM2cXzTWd_A",
-        authDomain: "medclinic-ds-30918.firebaseapp.com",
-        projectId: "medclinic-ds-30918",
-        storageBucket: "medclinic-ds-30918.firebasestorage.app",
-        messagingSenderId: "806442484893",
-        appId: "1:806442484893:web:4aa8836444593c1f338074"
-      };
-    
-      // Inicializa o Firebase e o Firestore
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
-    
-      // Seleciona o formulário
-      const form = document.getElementById("my-form");
-    
-      // Manipula o evento de envio do formulário
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault(); // Evita o recarregamento da página
-    
-         // Captura os dados do formulário
-      const nome = document.getElementById("event-title").value;
-      const cpf = document.getElementById("event-cpf").value; // Corrigido aqui
-      const whatsapp = document.getElementById("event-whatsapp").value;
-      const informacoes = document.getElementById("event-info").value;
-      const especialidade = document.getElementById("event-category").value;
-      const departamento = document.getElementById("event-department").value; // Corrigido aqui
-      const data = document.getElementById("event-date").value;
-      const horaInicio = document.getElementById("event-begin").value;
-      const horaFim = document.getElementById("event-end").value;
-
-      // Objeto com os dados do agendamento
-      const agendamento = {
-        nome,
-        cpf,
-        whatsapp,
-        informacoes,
-        especialidade,
-        departamento,
-        data,
-        horaInicio,
-        horaFim,
-      };
-
-    
-        try {
-          // Salva os dados no Firestore (coleção "agendamentos")
-          await addDoc(collection(db, "agendamentos"), agendamento);
-          alert("Agendamento salvo com sucesso!");
-        } catch (error) {
-          console.error("Erro ao salvar o agendamento: ", error);
-          alert("Erro ao salvar o agendamento. Tente novamente!");
-        }
-      });
-    </script>
 
   <script src="JS/agendamento.js"></script>
   <script src="JS/mobile-navbar.js"></script> 
